@@ -1,0 +1,47 @@
+name = "JRuby"
+type = "language"
+
+[plugin]
+description = "An implementation of the Ruby programming language atop the Java Virtual Machine."
+homepage-url = "https://www.jruby.org/"
+repository-url = "https://github.com/jruby/jruby"
+
+# JRuby versions have four segments (10.1.3.0). The fourth one is captured as
+# build metadata (10.1.3+0), so the download URL can rebuild the full version.
+[resolve]
+git-url = "https://github.com/jruby/jruby"
+version-pattern = "^(?<major>9|[1-9][0-9]+)\\.(?<minor>[0-9]+)\\.(?<patch>[0-9]+)\\.(?<build>[0-9]+)$"
+
+# Every version carries build metadata, which proto never picks as the stable
+# latest, so point latest at the highest version explicitly.
+[resolve.aliases]
+latest = "*"
+
+# The same archive works on every platform, it only needs a JDK. The .tar.gz
+# stores paths longer than 100 characters as GNU long names, which proto
+# truncates on extraction, so use the .zip everywhere.
+[platform.linux]
+archs = ["x64", "arm64"]
+download-file = "jruby-dist-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}-bin.zip"
+checksum-file = "jruby-dist-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}-bin.zip.sha256"
+archive-prefix = "jruby-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}"
+
+[platform.macos]
+archs = ["x64", "arm64"]
+download-file = "jruby-dist-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}-bin.zip"
+checksum-file = "jruby-dist-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}-bin.zip.sha256"
+archive-prefix = "jruby-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}"
+
+[platform.windows]
+archs = ["x86", "x64", "arm64"]
+download-file = "jruby-dist-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}-bin.zip"
+checksum-file = "jruby-dist-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}-bin.zip.sha256"
+archive-prefix = "jruby-{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}"
+
+[install]
+download-url = "https://repo1.maven.org/maven2/org/jruby/jruby-dist/{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}/{download_file}"
+checksum-url = "https://repo1.maven.org/maven2/org/jruby/jruby-dist/{versionMajor}.{versionMinor}.{versionPatch}.{versionBuild}/{checksum_file}"
+
+[install.exes.jruby]
+exe-path = "bin/jruby"
+primary = true

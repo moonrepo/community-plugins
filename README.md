@@ -49,6 +49,7 @@ proto install biome
 | [hyperfine](./tools/hyperfine.toml)               | A command-line benchmarking tool.                                                  |
 | [infisical](./tools/infisical.toml)               | The CLI for the open source secret management platform Infisical.                  |
 | [jira](./tools/jira.toml)                         | An interactive command line tool for Atlassian Jira.                               |
+| [jruby](./tools/jruby.toml)                       | An implementation of the Ruby programming language atop the Java Virtual Machine.  |
 | [just](./tools/just.toml)                         | A handy way to save and run project-specific commands.                             |
 | [mage](./tools/mage.toml)                         | A make/rake-like build tool using Go.                                              |
 | [mkcert](./tools/mkcert.toml)                     | Zero-config locally trusted development certificates.                              |
