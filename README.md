@@ -56,6 +56,7 @@ proto install biome
 | [octopus](./tools/octopus.toml)                   | Command line interface for Octopus Deploy.                                         |
 | [oxlint](./tools/oxlint.toml)                     | A JavaScript linter that needs no configuration by default.                        |
 | [pixi](./tools/pixi.toml)                         | A fast package management tool for the conda ecosystem.                            |
+| [pkl](./tools/pkl.toml)                           | A configuration as code language with rich validation and tooling.                 |
 | [rattler-build](./tools/rattler-build.toml)       | A fast Conda package builder.                                                      |
 | [ruff](./tools/ruff.toml)                         | An extremely fast Python linter and code formatter.                                |
 | [shellcheck](./tools/shellcheck.toml)             | A static analysis tool for shell scripts.                                          |
