@@ -37,6 +37,7 @@ proto install biome
 | [bazel](./tools/bazel.toml)                       | A fast, scalable, multi-language and extensible build system.                      |
 | [biome](./tools/biome.toml)                       | A performant toolchain for web projects.                                           |
 | [caddy](./tools/caddy.toml)                       | Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS.     |
+| [cilium](./tools/cilium.toml)                     | Install, inspect, and troubleshoot Cilium from the command line.                   |
 | [cmake](./tools/cmake.toml)                       | A cross-platform, open-source build system generator.                              |
 | [cosign](./tools/cosign.toml)                     | Code signing and transparency for containers and binaries.                         |
 | [dagger](./tools/dagger.toml)                     | Programmable CI/CD engine that runs your pipelines in containers.                  |
@@ -50,6 +51,7 @@ proto install biome
 | [infisical](./tools/infisical.toml)               | The CLI for the open source secret management platform Infisical.                  |
 | [jira](./tools/jira.toml)                         | An interactive command line tool for Atlassian Jira.                               |
 | [just](./tools/just.toml)                         | A handy way to save and run project-specific commands.                             |
+| [kubectl](./tools/kubectl.toml)                   | The Kubernetes command-line tool.                                                  |
 | [mage](./tools/mage.toml)                         | A make/rake-like build tool using Go.                                              |
 | [mkcert](./tools/mkcert.toml)                     | Zero-config locally trusted development certificates.                              |
 | [ninja](./tools/ninja.toml)                       | A small build system with a focus on speed.                                        |
@@ -60,11 +62,14 @@ proto install biome
 | [ruff](./tools/ruff.toml)                         | An extremely fast Python linter and code formatter.                                |
 | [shellcheck](./tools/shellcheck.toml)             | A static analysis tool for shell scripts.                                          |
 | [shfmt](./tools/shfmt.toml)                       | A shell formatter for POSIX Shell, Bash and mksh.                                  |
+| [stripe](./tools/stripe.toml)                     | Build, test, and manage a Stripe integration from the command line.                |
+| [talosctl](./tools/talosctl.toml)                 | Manage Talos Linux nodes and Kubernetes clusters.                                  |
 | [task](./tools/task.toml)                         | A task runner / build tool that aims to be simpler than GNU Make.                  |
 | [traefik](./tools/traefik.toml)                   | A modern HTTP reverse proxy and load balancer for microservices.                   |
 | [trufflehog](./tools/trufflehog.toml)             | Find and verify credentials.                                                       |
 | [watchexec](./tools/watchexec.toml)               | Executes commands in response to file modifications.                               |
 | [wizer](./tools/wizer.toml)                       | The WebAssembly pre-initializer.                                                   |
+| [zizmor](./tools/zizmor.toml)                     | Audit GitHub Actions workflows for security issues.                                |
 
 ## Contributing a plugin
 
