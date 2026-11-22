@@ -1,0 +1,37 @@
+name = "Stripe CLI"
+type = "cli"
+
+[plugin]
+description = "Build, test, and manage a Stripe integration from the command line."
+homepage-url = "https://docs.stripe.com/cli"
+repository-url = "https://github.com/stripe/stripe-cli"
+
+[platform.linux]
+archs = ["x64", "arm64"]
+download-file = "stripe_{version}_linux_{arch}.tar.gz"
+checksum-file = "stripe-linux-checksums.txt"
+
+[platform.macos]
+archs = ["x64", "arm64"]
+download-file = "stripe_{version}_mac-os_{arch}.tar.gz"
+checksum-file = "stripe-mac-checksums.txt"
+
+[platform.windows]
+archs = ["x64"]
+download-file = "stripe_{version}_windows_{arch}.zip"
+checksum-file = "stripe-windows-checksums.txt"
+
+[install]
+download-url = "https://github.com/stripe/stripe-cli/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/stripe/stripe-cli/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+
+[install.exes.stripe]
+exe-path = "stripe"
+primary = true
+
+[resolve]
+git-url = "https://github.com/stripe/stripe-cli"
+version-pattern = '^v(\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?)$'
